@@ -14,6 +14,17 @@ public class Time extends Activity{
 	final int minute = calendar.get(Calendar.MINUTE);
 	final int second = calendar.get(Calendar.SECOND);
 	final int ms = calendar.get(Calendar.MILLISECOND);
+	
+	int[] i=new int[6];
+	
+	int h;
+	int h2;
+	
+	int min;
+	int min2;
+	
+	int sec;
+	int sec2;
 
 	public int[] getT(){
 		Log.v("year/month/day hour:minute:second",
@@ -38,6 +49,18 @@ public class Time extends Activity{
 		return i;
 		//int resID = getResources().getIdentifier("c"+String.valueOf(month+1),"drawable", this.getPackageName());
 		
+		
+	}
+	
+	public void get_t(){
+		h = i[0] =  hour / 10;
+		h2 = i[1] =hour % 10;
+		
+		min = i[2] =minute / 10;
+		min2 = i[3] =minute % 10;
+		
+		sec = i[4] =second / 10;
+		sec2 = i[5] =second % 10;
 		
 	}
 	
